@@ -15,3 +15,10 @@
  ![New_template](img/New_Template.png)
 
  ![Zabbix_templ](img/Zabbix_new_template.png)
+Добавим свой макрос
+Укажем параметры обновления 5s и 50s
+ ![alt text](img/macros_addpng.png)
+ Создаем item
+ ![alt text](img/createitems.png)
+ СоздаетДанные
+ ![alt text](img/CreateIITEM2.png)
