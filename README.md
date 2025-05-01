@@ -178,6 +178,7 @@ if len(sys.argv) < 2:
     sys.exit(1)
 
 # Определение поведения в зависимости от переданных параметров
+```
 if sys.argv[1] == '-ping':  # Если -ping
     result = os.popen("ping -c 1 " + sys.argv[2]).read()  # Делаем пинг по заданному адресу
     result = re.findall(r"time=(.*) ms", result)  # Выдёргиваем из результата время
