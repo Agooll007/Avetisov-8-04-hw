@@ -103,3 +103,27 @@
  ![alt text](img/line.png)
  Если хотим чтобы хост назавался как он называется в хостах то используем переменную
   ![alt text](img/Hostname.png)
+
+
+ ## Задание 6* со звёздочкой
+Создайте UserParameter на bash и прикрепите его к созданному вами ранее шаблону. Он должен вызывать скрипт, который:
+
+при получении 1 будет возвращать ваши ФИО,
+при получении 2 будет возвращать текущую дату.
+Требования к результату
+ Прикрепите в файл README.md код скрипта, а также скриншот Latest data с результатом работы скрипта на bash, чтобы был виден результат работы скрипта при отправке в него 1 и 2
+
+ ### Создадим простой UserParameter
+
+![alt text](img/add_zabbix_custom_echo.png)
+
+Создадим файл test_up.conf в директории /etc/zabbix/zabbix_agentd.d
+```
+sudo nano /etc/zabbix/zabbix_agentd.d/test_user_parameter.conf
+```
+
+Добавим туда строку:
+
+```
+UserParameter=my_script[*], python3 /etc/zabbix/test_python_script.py $1 $2
+```
