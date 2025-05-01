@@ -21,4 +21,44 @@
  Создаем item
  ![alt text](img/createitems.png)
  СоздаетДанные
- ![alt text](img/CreateIITEM2.png)
+ ![cri](img/CreateIITEM2.png)
+
+ Привязываем шаблон к хосту
+ ![alt text](img/add_tmpl_to_host.png)
+
+ --------------
+ ### создаем шаблоны для CPU и RAM
+
+ ![alt text](img/CPU_RAM.png)
+
+ ![alt text](img/macro.png)
+
+ ![alt text](img/CPU.png)
+
+ ![alt text](img/RAM.png)
+
+ прикручиваем шаблон к хосту
+ ![alt text](img/add_tohost.png)
+ ![alt text](img/add_tohost2.png)
+ ![alt text](img/addtohost3.png)
+ обновляем данные
+ ![alt text](img/upd_itemspng.png)
+ Идем смотреть что получилось
+ так же можно потыкать в графики
+ ![alt text](img/resultpng.png)
+ ![alt text](img/gaphpng.png)
+
+
+## Задание 2
+Добавьте в Zabbix два хоста и задайте им имена <фамилия и инициалы-1> и <фамилия и инициалы-2>. Например: ivanovii-1 и ivanovii-2.
+
+Процесс выполнения
+Выполняя ДЗ сверяйтесь с процессом отражённым в записи лекции.
+Установите Zabbix Agent на 2 виртмашины, одной из них может быть ваш Zabbix Server
+Добавьте Zabbix Server в список разрешенных серверов ваших Zabbix Agentов
+Добавьте Zabbix Agentов в раздел Configuration > Hosts вашего Zabbix Servera
+Прикрепите за каждым хостом шаблон Linux by Zabbix Agent
+Проверьте что в разделе Latest Data начали появляться данные с добавленных агентов
+Требования к результату
+ Результат данного задания сдавайте вместе с заданием 3
+ ![alt text](img/hosts.png)
