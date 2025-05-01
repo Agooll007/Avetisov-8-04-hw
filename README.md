@@ -127,3 +127,95 @@ sudo nano /etc/zabbix/zabbix_agentd.d/test_user_parameter.conf
 ```
 UserParameter=my_script[*], python3 /etc/zabbix/test_python_script.py $1 $2
 ```
+
+создаем скрипт
+``nano /etc/zabbix/test_python_script.py``
+```
+import sys
+import os
+import re
+if (sys.argv[1] == '-ping'): # Если -ping
+ result=os.popen("ping -c 1 " + sys.argv[2]).read() # Делаем пинг по заданному адресу
+ result=re.findall(r"time=(.*) ms", result) # Выдёргиваем из результата время
+ print(result[0]) # Выводим результат в консоль
+elif (sys.argv[1] == '-simple_print'): # Если simple_print
+ print(sys.argv[2]) # Выводим в консоль содержимое sys.arvg[2]
+else: # Во всех остальных случаях
+ print(f"unknown input: {sys.argv[1]}") # Выводим непонятый запрос в консоль
+```
+![alt text](img/user_parameters.png)
+![alt text](img/script_use.png)
+![alt text](img/script2.png)
+
+
+# Доработанный скрипт Zabbix
+
+Этот скрипт расширяет функции из лекции и обрабатывает различные запросы:
+
+- При вызове с аргументом `1` возвращает ФИО.
+- При вызове с аргументом `2` возвращает текущую дату.
+- При вызове с аргументом `-ping <адрес>` выполняет ping по заданному адресу.
+- При вызове с аргументом `-simple_print <текст>` выводит текст.
+
+## Установка
+
+1. Убедитесь, что Zabbix Agent установлен на сервере.
+2. Скопируйте скрипт в `/etc/zabbix/test_python_script.py`.
+3. Обновите конфигурацию Zabbix Agent с помощью добавления параметров в файл `/etc/zabbix/zabbix_agentd.d/test_up.conf`.
+4. Перезапустите Zabbix Agent:
+   ```bash
+   sudo systemctl restart zabbix-agent
+```
+```
+import sys
+import os
+import re
+from datetime import datetime
+
+# Проверка на количество передаваемых аргументов
+if len(sys.argv) < 2:
+    print("Error: Not enough arguments")
+    sys.exit(1)
+
+# Определение поведения в зависимости от переданных параметров
+if sys.argv[1] == '-ping':  # Если -ping
+    result = os.popen("ping -c 1 " + sys.argv[2]).read()  # Делаем пинг по заданному адресу
+    result = re.findall(r"time=(.*) ms", result)  # Выдёргиваем из результата время
+    if result:
+        print(result[0])  # Выводим результат в консоль
+    else:
+        print("Ping failed or no response.")
+elif sys.argv[1] == '1':  # Запрос на ФИО
+    print("Ваши ФИО")  # Замените на свои ФИО
+elif sys.argv[1] == '2':  # Запрос на текущую дату
+    print(datetime.now().strftime("%Y-%m-%d %H:%M:%S"))  # Вывод текущей даты
+elif sys.argv[1] == '-simple_print':  # Если simple_print
+    print(sys.argv[2])  # Выводим в консоль содержимое sys.argv[2]
+else:  # Во всех остальных случаях
+    print(f"unknown input: {sys.argv[1]}")  # Выводим непонятый запрос в консоль
+
+```
+
+![alt text](img/zabbiconfig.png)
+
+- Для получения ФИО:
+    - Запрос:
+    `` zabbix_get -s 192.168.31.125 -p 10050 -k my_fio``
+- Для получения текущей даты:
+    - Запрос:`` zabbix_get -s 192.168.31.12 -p 10050 -k my_date``
+- Для проверки Ping:
+    - Запрос: ``zabbix_get -s 192.168.31.12 -p 10050 -k "my_ping[8.8.8.8]"``
+- Для простого вывода текста:
+    - Запрос: ``zabbix_get -s 192.168.31.12 -p 10050 -k "my_simple_print[текст]"``
+
+
+![alt text](img/zabbixget.png)
+
+
+Задание 8* со звёздочкой
+Настройте автообнаружение и прикрепление к хостам созданного вами ранее шаблона.
+
+![alt text](img/autodecdoveryrule.png)
+![auto2](img/auto2.png)
+![alt text](img/auto3.png)
+
