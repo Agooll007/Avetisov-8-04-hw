@@ -15,6 +15,9 @@
  ![New_template](img/New_Template.png)
 
  ![Zabbix_templ](img/Zabbix_new_template.png)
+ -----------------
+ ![alt text](img/Zadanie1.png)
+ -----------------
 Добавим свой макрос
 Укажем параметры обновления 5s и 50s
  ![alt text](img/macros_addpng.png)
@@ -163,9 +166,10 @@ else: # Во всех остальных случаях
 2. Скопируйте скрипт в `/etc/zabbix/test_python_script.py`.
 3. Обновите конфигурацию Zabbix Agent с помощью добавления параметров в файл `/etc/zabbix/zabbix_agentd.d/test_up.conf`.
 4. Перезапустите Zabbix Agent:
-   ```bash
+```
    sudo systemctl restart zabbix-agent
 ```
+
 ```
 import sys
 import os
@@ -178,7 +182,7 @@ if len(sys.argv) < 2:
     sys.exit(1)
 
 # Определение поведения в зависимости от переданных параметров
-```
+
 if sys.argv[1] == '-ping':  # Если -ping
     result = os.popen("ping -c 1 " + sys.argv[2]).read()  # Делаем пинг по заданному адресу
     result = re.findall(r"time=(.*) ms", result)  # Выдёргиваем из результата время
