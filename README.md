@@ -14,15 +14,11 @@
 1. Создаем новый шаблон
  ![New_template](img/New_Template.png)
 
-
-## $${\color{red}'---------Исправление----'}$$  
- ![Zabbix_templ](img/Zabbix_new_template.png)
-
- 
+ ## $${\color{red}____________________}$$  
  ![alt text](img/zadanie1_1.png)
  -----------------
  ![alt text](img/Zadanie1.png)
- -----------------
+ ## $${\color{red}____________________}$$  
 Добавим свой макрос
 Укажем параметры обновления 5s и 50s
  ![alt text](img/macros_addpng.png)
@@ -33,11 +29,12 @@
 
  Привязываем шаблон к хосту
  ![alt text](img/add_tmpl_to_host.png)
-## $${\color{red}'------конец_Исправления-------'}$$  
+ 
+![alt text](<img/Снимок экрана 2025-05-03 153214.png>)
  --------------
  ### создаем шаблоны для CPU и RAM
-
- ![alt text](img/CPU_RAM.png)
+![alt text](<img/Снимок экрана 2025-05-03 153214.png>)
+ 
 
  ![alt text](img/macro.png)
 
