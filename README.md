@@ -15,7 +15,7 @@
  ![New_template](img/New_Template.png)
 
 
-<span style="color:red;"> Исправление задания </span>
+$${\color{red}Red}$$  Исправление задания 
  ![Zabbix_templ](img/Zabbix_new_template.png)
 
  
