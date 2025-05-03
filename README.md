@@ -13,7 +13,7 @@
 ## Ответ 
 1. Создаем новый шаблон
  ![New_template](img/New_Template.png)
-
+![alt text](<img/Снимок экрана 2025-05-03 153214.png>)
 
  ![alt text](img/zadanie1_1.png)
  -----------------
@@ -30,7 +30,7 @@
  Привязываем шаблон к хосту
  ![alt text](img/add_tmpl_to_host.png)
 
-![alt text](<img/Снимок экрана 2025-05-03 153214.png>)
+
  --------------
  ### создаем шаблоны для CPU и RAM
 ![alt text](<img/Снимок экрана 2025-05-03 153214.png>)
