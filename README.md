@@ -14,7 +14,12 @@
 1. Создаем новый шаблон
  ![New_template](img/New_Template.png)
 
+
+<span style="color:red;"> Исправление задания </span>
  ![Zabbix_templ](img/Zabbix_new_template.png)
+
+ 
+ ![alt text](img/zadanie1_1.png)
  -----------------
  ![alt text](img/Zadanie1.png)
  -----------------
