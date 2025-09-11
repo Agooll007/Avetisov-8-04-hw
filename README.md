@@ -12,7 +12,7 @@
 
 ## Ответ 
 1. Создаем новый шаблон
- ![alt text](img/New_Template.png](https://github.com/Agooll007/Avetisov-8-04-hw/blob/main/img/Zadania1.png)
+ ![alt text](https://github.com/Agooll007/Avetisov-8-04-hw/blob/main/img/Zadania1.png)
 
  Создаем item
  ![alt text](img/createitems.png](https://github.com/Agooll007/Avetisov-8-04-hw/blob/main/img/RAM%20ITEM.png)
