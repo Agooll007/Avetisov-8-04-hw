@@ -58,8 +58,3 @@
 Требования к результату
  Прикрепите в файл README.md скриншот дашборда с названием «Задание 4»
 ![alt text](https://github.com/Agooll007/Avetisov-8-04-hw/blob/main/img/Custom%20Dashboard.png)
-
-![alt text](img/autodecdoveryrule.png)
-![auto2](img/auto2.png)
-![alt text](img/auto3.png)
-
