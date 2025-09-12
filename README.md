@@ -12,8 +12,9 @@
 
 ## Ответ 
 1. Создаем новый шаблон
- ![alt text](https://github.com/Agooll007/Avetisov-8-04-hw/blob/main/img/Zadania1.png)
-
+ ![alt text](https://github.com/Agooll007/Avetisov-8-04-hw/blob/main/img/Zadacha1.png)
+ ![alt text](https://github.com/Agooll007/Avetisov-8-04-hw/blob/main/img/Macros.png)
+ ![alt text](https://github.com/Agooll007/Avetisov-8-04-hw/blob/main/img/Template_zadanie1.png)
  Создаем item
  ![alt text](https://github.com/Agooll007/Avetisov-8-04-hw/blob/main/img/RAM%20ITEM.png)
  ![alt text](https://github.com/Agooll007/Avetisov-8-04-hw/blob/main/img/CPU%20ITEM.png)
@@ -31,9 +32,6 @@
 Требования к результату
  Результат данного задания сдавайте вместе с заданием 3
 
- ![alt text](https://github.com/Agooll007/Avetisov-8-04-hw/blob/main/img/Hosts.png)
-
-
 ## Задание 3
 Привяжите созданный шаблон к двум хостам. Также привяжите к обоим хостам шаблон Linux by Zabbix Agent.
 
@@ -44,17 +42,16 @@
 Проверьте что в раздел Latest Data начали поступать необходимые данные из вашего шаблона
 Требования к результату
  Прикрепите в файл README.md скриншот страницы хостов, где будут видны привязки шаблонов с названиями «Задание 2-3». Хосты должны иметь зелёный статус подключения
-![alt text](https://github.com/Agooll007/Avetisov-8-04-hw/blob/main/img/Hosts.png)
+![alt text](https://github.com/Agooll007/Avetisov-8-04-hw/blob/main/img/Zadanie1_hosts.png)
 ![alt text](https://github.com/Agooll007/Avetisov-8-04-hw/blob/main/img/Latest%20Data.png)
 ![alt text](https://github.com/Agooll007/Avetisov-8-04-hw/blob/main/img/Monitoring.png)
 
 ## Задание 4
 Создайте свой кастомный дашборд.
-
 Процесс выполнения
 Выполняя ДЗ сверяйтесь с процессом отражённым в записи лекции.
 В разделе Dashboards создайте новый дашборд
 Разместите на нём несколько графиков на ваше усмотрение.
 Требования к результату
  Прикрепите в файл README.md скриншот дашборда с названием «Задание 4»
-![alt text](https://github.com/Agooll007/Avetisov-8-04-hw/blob/main/img/Custom%20Dashboard.png)
+![alt text](https://github.com/Agooll007/Avetisov-8-04-hw/blob/main/img/Zadanie4.png)
